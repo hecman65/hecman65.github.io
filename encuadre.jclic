@@ -33,8 +33,10 @@
   <item id="006" name="6. Conectivismo" />
   <item id="007" name="7. Constructivismo" />
   <item id="008" name="8. Cognitivismo" />
-  <item id="009" name="9. Memorama" />
-  <item id="010" name="10. Fin" navButtons="fwd">
+  <item id="009" name="9. Cuarto reto &quot;Memorama&quot;" />
+  <item id="010" name="10. Aplicaciones" />
+  <item id="011" name="11. Quinto reto &quot;Sopa de letras&quot;" />
+  <item id="012" name="12. Fin" navButtons="fwd">
    <jump action="EXIT" id="forward" />
   </item>
  </sequence>
@@ -288,7 +290,7 @@
     <shaper class="@Rectangular" cols="1" rows="1" />
    </cells>
   </activity>
-  <activity class="@memory.MemoryGame" name="9. Memorama" code="">
+  <activity class="@memory.MemoryGame" name="9. Cuarto reto &quot;Memorama&quot;" code="">
    <description />
    <messages>
     <cell type="initial">
@@ -317,41 +319,11 @@
     <window bgColor="0xCCFFCC" border="true" />
     <skin file="@default.xml" />
    </settings>
-   <cells rows="3" cols="3" cellWidth="120.0" cellHeight="110.0" border="true" id="primary">
+   <cells rows="2" cols="2" cellWidth="192.0" cellHeight="110.0" border="true" id="primary">
     <style />
-    <shaper class="@Rectangular" cols="3" rows="3" />
+    <shaper class="@Rectangular" cols="2" rows="2" />
     <cell>
-     <style>
-      <color background="0xFFFFCC" />
-     </style>
-     <p>GMAIL</p>
-    </cell>
-    <cell>
-     <style>
-      <color background="0xFFFFCC" />
-     </style>
-     <p>AGNUS</p>
-    </cell>
-    <cell>
-     <style>
-      <color background="0xFFFFCC" />
-     </style>
-     <p>CLASSROOM</p>
-    </cell>
-    <cell>
-     <style>
-      <color background="0xFFFFCC" />
-     </style>
-     <p>SIIAU</p>
-    </cell>
-    <cell>
-     <style>
-      <color background="0xFFFFCC" />
-     </style>
-     <p>MEET</p>
-    </cell>
-    <cell>
-     <style>
+     <style borderStroke="0.7" markerStroke="5.0">
       <color background="0xFFFFCC" />
      </style>
      <p>HUMANISMO</p>
@@ -363,7 +335,7 @@
      <p>CONSTRUCTIVISMO</p>
     </cell>
     <cell>
-     <style>
+     <style borderStroke="0.7" markerStroke="5.0">
       <color background="0xFFFFCC" />
      </style>
      <p>COGNITIVISMO</p>
@@ -378,7 +350,80 @@
    <scramble times="31" />
    <layout position="AB" />
   </activity>
-  <activity class="@panels.InformationScreen" name="10. Fin" code="">
+  <activity class="@panels.InformationScreen" name="10. Aplicaciones" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="0.7" markerStroke="5.0">
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Memoriza y avanza.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="false">
+    <container bgColor="0x00CC66">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xCCFFCC" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="9.png">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="11. Quinto reto &quot;Sopa de letras&quot;" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Encuentra las 5 aplicaciones.</p>
+    </cell>
+    <cell type="final">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>¡¡ Muy bien ..!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Vuelve a intentarlo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0x009999">
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFCC" border="true" />
+    <skin file="@default.xml" />
+   </settings>
+   <textGrid rows="9" columns="7" cellWidth="50.0" cellHeight="40.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>CLASSROOM</row>
+     <row>**G*****E</row>
+     <row>**N**G**E</row>
+     <row>**U**M**T</row>
+     <row>**SIIAU**</row>
+     <row>*****I***</row>
+     <row>*****L***</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">AGNUS</clue>
+    <clue id="1">MEET</clue>
+    <clue id="2">GMAIL</clue>
+    <clue id="3">CLASSROOM</clue>
+    <clue id="4">SIIAU</clue>
+   </clues>
+  </activity>
+  <activity class="@panels.InformationScreen" name="12. Fin" code="">
    <description />
    <messages>
     <cell type="initial">
@@ -409,6 +454,7 @@
   <media name="5.png" file="5.png" />
   <media name="6.png" file="6.png" />
   <media name="7.png" file="7.png" />
+  <media name="9.png" file="9.png" />
  </mediaBag>
 </JClicProject>
 
